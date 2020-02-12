@@ -1,8 +1,11 @@
 import React, { useState } from "react";
-import "./App.css";
+// import "./App.css";
 import "./calc.css";
 import Display from "./components/Display.js";
 import Keypad from "./components/Keypad.js";
+
+const vh = window.innerHeight;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 function App() {
   const [keys, setKeys] = useState("");
@@ -31,9 +34,10 @@ function App() {
   };
 
   return (
-    <div id="main_focus" tabIndex={-1} onKeyDown={event => handleKey(event)}>
+    <div id="main-focus" tabIndex={-1} onKeyDown={event => handleKey(event)}>
       <Display keys={keys} setKeys={setKeys} run={run} setRun={setRun} />
       <Keypad keys={keys} setKeys={setKeys} />
+      <div id="footer"></div>
     </div>
   );
 }

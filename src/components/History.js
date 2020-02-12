@@ -24,7 +24,6 @@ function History({ history, fractions }) {
   return (
     <>
       <div className="history" name="history" id="history">
-        <div className="buffer"></div>
         <GetJSX />
       </div>
     </>
