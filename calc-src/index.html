@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="manifest" href="manifest.json">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Calculator">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="calc.css">
+</head>
+
+<body>
+  <div id="calc-body">
+    <div class="display">
+      <ul class="history" name="history" id="history"></ul>
+      <div id="current">
+        <div class="current" id="expression"></div>
+        <div id="cursor"></div>
+      </div>
+    </div>
+    <ul class="buttons disable-select">
+      <!-- first line -->
+      <li class="key-oper button nonplot" id="clear" value="clear"><div class="text mini">clear<br>current</div></li>
+      <li class="key-oper button" id="lh" value="lh"><div class="text symbol">(</div></li>
+      <li class="key-oper button" id="rh" value="rh"><div class="text symbol">)</div></li>
+      <li class="key-oper button" id="power" value="power"><div class="text symbol">^</div></li>
+      <li class="key-oper button" id="divide" value="divide"><div class="text symbol">÷</div></li>
+      <!-- second line -->
+      <li class="key-oper button nonplot" id="clear-history" value="clear-history"><div class="text mini">clear<br>history</div></li>
+      <li class="key-num button" id="n7" value="7"><div class="text">7</div></li>
+      <li class="key-num button" id="n8" value="8"><div class="text">8</div></li>
+      <li class="key-num button" id="n9" value="9"><div class="text">9</div></li>
+      <li class="key-oper button" id="multiply" value="multiply"><div class="text symbol">×</div></li>
+      <!-- third line -->
+      <li class="key-oper button nonplot" id="del" value="del"><div class="text mini">delete</div></li>
+      <li class="key-num button" id="n4" value="4"><div class="text">4</div></li>
+      <li class="key-num button" id="n5" value="5"><div class="text">5</div></li>
+      <li class="key-num button" id="n6" value="6"><div class="text">6</div></li>
+      <li class="key-oper button" id="add" value="add"><div class="text symbol">+</div></li>
+      <!-- fourth line -->
+      <li class="key-oper button" id="pi" value="pi"><div class="text mini">PI</div></li>
+      <li class="key-num button" id="n1" value="1"><div class="text">1</div></li>
+      <li class="key-num button" id="n2" value="2"><div class="text">2</div></li>
+      <li class="key-num button" id="n3" value="3"><div class="text">3</div></li>
+      <li class="key-oper button" id="subtract" value="subtract"><div class="text symbol">-</div></li>
+      <!-- fifth line -->
+      <li class="key-oper button" id="mod" value="mod"><div class="text mini">mod</div></li>
+      <li class="key-num button" id="n0" value="0"><div class="text">0</div></li>
+      <li class="key-oper button" id="dot" value="."><div class="text">.</div></li>
+      <li class="key-oper button nonplot" id="last-ans" value="last-ans"><div class="text mini">ans</div></li>
+      <li class="key-oper button nonplot" id="equals" value="equals"><div class="text symbol">=</div></li>
+    </ul>
+  </div>
+  <script src="calc.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "Calculator",
+  "short_name": "Calc",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "A simple Calculator with multi-line history logging",
+}
