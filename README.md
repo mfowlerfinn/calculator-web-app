@@ -14,11 +14,17 @@ Some of the **awesome** features:
   - algebra, trig, and calculus input fuctions (_with os keyboard_)
   - check out the syntax [here!](http://asciimath.org/)
 
+### `Browser support`
+
+This awesomeness only works in browsers with MathML support.
+
+- Chrome does not support MathML, [help here.](https://mathml.igalia.com/)
+
 ## Installing the calculator on iOS
 
 Open **Safari** and navigate to the [calculator.](https://calculator.mattfowlerfinn.now.sh)
 
-Open the **share** menu. Select **Add to Home Screen**.
+Open the **Share** menu. Select **Add to Home Screen**.
 
 ### `Updating`
 
