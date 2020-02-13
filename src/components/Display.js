@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import History from "./History";
 import CurrentEquation from "./CurrentEquation";
 
-const message = "Calc v0.9";
+const message = "Calc v1.0";
 
 const historyReducer = (state, action) => {
   switch (action.type) {

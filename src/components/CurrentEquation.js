@@ -6,8 +6,6 @@ import { create, all } from "mathjs";
 const math = create(all);
 
 function CurrentEquation({ keys, run, setRun, setHistory, history }) {
-  const [ansFraction, setAnsFraction] = useState("");
-  const [ansDecimal, setAnsDecimal] = useState("");
   const [latex, setLatex] = useState();
   const [asciiInput, setAsciiInput] = useState("");
 
@@ -44,24 +42,21 @@ function CurrentEquation({ keys, run, setRun, setHistory, history }) {
 
   function Eval() {
     try {
-      let ans = math.evaluate(asciiInput);
-      setAnsDecimal(String.raw`${ans}`);
-      let fract = getFraction(ans);
-      setAnsFraction(String.raw`${fract}`);
+      if (asciiInput !== "") {
+        let ans = String.raw`${math.evaluate(asciiInput)}`;
+        let fract = String.raw`${getFraction(ans)}`;
+        setAsciiInput("");
+        setHistory({
+          ascii: asciiInput,
+          latex: latex,
+          answer: ans,
+          answerFraction: fract
+        });
+      }
     } catch (err) {
       console.error("SYNTAX ERROR, revise input expression.");
     }
   }
-
-  useEffect(() => {
-    setHistory({
-      ascii: asciiInput,
-      latex: latex,
-      answer: ansDecimal,
-      answerFraction: ansFraction
-    });
-    setAsciiInput("");
-  }, [ansFraction]);
 
   useEffect(() => {
     if (run) {
