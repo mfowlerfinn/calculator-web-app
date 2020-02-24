@@ -63,6 +63,7 @@ function CurrentEquation({ keys, run, setRun, setHistory, history }) {
       Eval();
     }
     setRun(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [run]);
 
   useEffect(() => {
@@ -118,6 +119,7 @@ function CurrentEquation({ keys, run, setRun, setHistory, history }) {
           break;
       }
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [keys]);
 
   return (
