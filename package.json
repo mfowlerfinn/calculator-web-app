@@ -15,7 +15,7 @@
     "eslint-plugin-react": "^7.18.3",
     "eslint-plugin-react-hooks": "^2.3.0",
     "katex": "^0.11.1",
-    "mathjs": "^6.6.0",
+    "mathjs": "^7.5.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-html-parser": "^2.0.2",
